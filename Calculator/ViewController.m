@@ -13,8 +13,16 @@
 
 @implementation ViewController
 @synthesize display = _display;
+@synthesize brain = _brain;
+
 @synthesize userIsInMiddleOfEnteringANumber = _userIsInMiddleOfEnteringANumber;
-@synthesize digit7 = _digit7;
+
+- (CalculatorBrain *) brain{
+    if (_brain == nil){
+        _brain = [[CalculatorBrain alloc] init];
+    }
+    return _brain;
+}
 - (IBAction)digitPressed:(UIButton *)sender {
     NSLog(@"digit %@ is pressed.", sender.currentTitle);
     NSString *digit = sender.currentTitle;
@@ -27,15 +35,20 @@
     }
 }
 
-- (IBAction)operandPressed:(UIButton *)sender {
+- (IBAction)operationPressed:(UIButton *)sender {
+    NSString *operand = sender.currentTitle;
+    self.userIsInMiddleOfEnteringANumber = NO;
+    if ([@"+" isEqualToString:operand]){
+        
+    }
 }
 
 
 - (IBAction)enterPressed {
+    [self.brain setOperand:[self.display.text doubleValue]];
 }
 
 - (void)viewDidUnload {
-    [self setDigit7:nil];
     [super viewDidUnload];
 }
 @end

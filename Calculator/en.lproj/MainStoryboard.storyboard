@@ -182,7 +182,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operandPressed:" destination="2" eventType="touchUpInside" id="fGN-Bk-Iug"/>
+                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="mdX-ZG-k5c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y3S-sl-Il9">
@@ -197,7 +197,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operandPressed:" destination="2" eventType="touchUpInside" id="Evs-My-MhC"/>
+                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="xal-6L-2CO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qul-d7-Ikj">
@@ -212,7 +212,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operandPressed:" destination="2" eventType="touchUpInside" id="oYB-cD-4FP"/>
+                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="a2D-if-6NH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MCm-YM-fqc">
@@ -227,7 +227,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operandPressed:" destination="2" eventType="touchUpInside" id="Fvb-0p-p4t"/>
+                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="HNa-Pv-ILk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UvE-Lv-Rkm">

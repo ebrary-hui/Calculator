@@ -20,6 +20,7 @@
 		A582B782149EB966004A104A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A582B763149EB965004A104A /* Foundation.framework */; };
 		A582B78A149EB966004A104A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A582B788149EB966004A104A /* InfoPlist.strings */; };
 		A582B78D149EB966004A104A /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A582B78C149EB966004A104A /* CalculatorTests.m */; };
+		A5FC29FF14A00CC90045EB64 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FC29FE14A00CC90045EB64 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		A582B789149EB966004A104A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A582B78B149EB966004A104A /* CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorTests.h; sourceTree = "<group>"; };
 		A582B78C149EB966004A104A /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		A5FC29FD14A00CC90045EB64 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		A5FC29FE14A00CC90045EB64 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				A582B776149EB965004A104A /* ViewController.h */,
 				A582B777149EB965004A104A /* ViewController.m */,
 				A582B768149EB965004A104A /* Supporting Files */,
+				A5FC29FD14A00CC90045EB64 /* CalculatorBrain.h */,
+				A5FC29FE14A00CC90045EB64 /* CalculatorBrain.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				A582B76E149EB965004A104A /* main.m in Sources */,
 				A582B772149EB965004A104A /* AppDelegate.m in Sources */,
 				A582B778149EB965004A104A /* ViewController.m in Sources */,
+				A5FC29FF14A00CC90045EB64 /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +438,7 @@
 				A582B792149EB966004A104A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A582B793149EB966004A104A /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				A582B795149EB966004A104A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
