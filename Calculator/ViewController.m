@@ -35,18 +35,19 @@
     }
 }
 
-- (IBAction)operationPressed:(UIButton *)sender {
-    NSString *operand = sender.currentTitle;
-    self.userIsInMiddleOfEnteringANumber = NO;
-    if ([@"+" isEqualToString:operand]){
-        
-    }
-}
-
-
 - (IBAction)enterPressed {
-    [self.brain setOperand:[self.display.text doubleValue]];
+    [self.brain pushOperand:[self.display.text doubleValue]];
+    self.userIsInMiddleOfEnteringANumber = NO;
 }
+
+
+- (IBAction)operationPressed:(UIButton *)sender {
+    if (self.userIsInMiddleOfEnteringANumber) [self enterPressed];
+    self.userIsInMiddleOfEnteringANumber = NO;
+    NSString *resultString = [NSString stringWithFormat:@"%g", [self.brain performOperation:sender.currentTitle]];
+    self.display.text = resultString;
+}
+
 
 - (void)viewDidUnload {
     [super viewDidUnload];

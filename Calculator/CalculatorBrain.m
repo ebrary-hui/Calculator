@@ -19,7 +19,7 @@
     return _operandStack;
 }
 
--(void)setOperand:(double)operand{
+-(void)pushOperand:(double)operand{
     [self.operandStack addObject:[NSNumber numberWithDouble:operand]];
 }
 
@@ -29,6 +29,15 @@
         [self.operandStack removeLastObject];
     }
     return [operand doubleValue]; 
+}
+
+-(double)performOperation: (NSString *)operation{
+    double result = 0;
+    if ([operation isEqualToString:@"+"]) {
+        result = [self popOperand] + [self popOperand];
+    }
+    [self pushOperand:result];
+    return result;
 }
 
 @end
