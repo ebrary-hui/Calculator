@@ -36,7 +36,8 @@
     if ([operation isEqualToString:@"+"]) {
         result = [self popOperand] + [self popOperand];
     } else if ([@"-" isEqualToString:operation]) {
-        result = [self popOperand] - [self popOperand];
+        double b = [self popOperand];
+        result = [self popOperand] - b;
         
     } else if ([@"*" isEqualToString:operation]) {
         result = [self popOperand] * [self popOperand];
