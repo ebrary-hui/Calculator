@@ -32,7 +32,7 @@
     NSString *currentText = self.display.text;
     if ([@"." isEqualToString: digit]){
         NSRange range = [currentText rangeOfString:@"."];
-        if (range.location != NSNotFound){
+        if (range.location != NSNotFound || !self.userIsInMiddleOfEnteringANumber){
             return;
         }
     }
