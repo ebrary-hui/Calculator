@@ -23,16 +23,26 @@
     }
     return _brain;
 }
+- (IBAction)decimalPointPressed {
+    NSLog(@"Decimal point pressed");
+}
+
 - (IBAction)digitPressed:(UIButton *)sender {
-    NSLog(@"digit %@ is pressed.", sender.currentTitle);
     NSString *digit = sender.currentTitle;
+    NSString *currentText = self.display.text;
+    if ([@"." isEqualToString: digit]){
+        NSRange range = [currentText rangeOfString:@"."];
+        if (range.location != NSNotFound){
+            return;
+        }
+    }
     if (self.userIsInMiddleOfEnteringANumber){
-        self.display.text = [self.display.text stringByAppendingString:digit];
-        
+        currentText = [self.display.text stringByAppendingString:digit];
     }else{
-        self.display.text = digit;
+        currentText = digit;
         self.userIsInMiddleOfEnteringANumber = YES;
     }
+    self.display.text = currentText;
 }
 
 - (IBAction)enterPressed {
