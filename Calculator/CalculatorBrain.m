@@ -42,10 +42,29 @@
     } else if ([@"*" isEqualToString:operation]) {
         result = [self popOperand] * [self popOperand];
     
+        
+    } else if ([@"sin" isEqualToString:operation]) {
+        result = sin([self popOperand]);
+        
+        
+    } else if ([@"cos" isEqualToString:operation]) {
+        result = cos([self popOperand]);
+        
+        
+    } else if ([@"sqrt" isEqualToString:operation]) {
+        double b = [self popOperand];
+        if (b >= 0){
+            result = sqrt([self popOperand]);
+        }else{
+            NSLog(@"negative value is not allowed here.");
+        }
+        
     } else if ([@"/" isEqualToString:operation]) {
         double b = [self popOperand];
+        if (b == 0){
+            NSLog(@"denominator can not be 0");
+        }
         result = [self popOperand] / b;
-        
     }
     [self pushOperand:result];
     return result;
