@@ -12,5 +12,6 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *display;
 @property (nonatomic, strong) CalculatorBrain *brain;
+@property (weak, nonatomic) IBOutlet UILabel *processDisplay;
 
 @end

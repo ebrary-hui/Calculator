@@ -41,16 +41,10 @@
         
     } else if ([@"*" isEqualToString:operation]) {
         result = [self popOperand] * [self popOperand];
-    
-        
     } else if ([@"sin" isEqualToString:operation]) {
         result = sin([self popOperand]);
-        
-        
     } else if ([@"cos" isEqualToString:operation]) {
         result = cos([self popOperand]);
-        
-        
     } else if ([@"sqrt" isEqualToString:operation]) {
         double b = [self popOperand];
         if (b >= 0){
@@ -65,6 +59,8 @@
             NSLog(@"denominator can not be 0");
         }
         result = [self popOperand] / b;
+    } else if ([@"π" isEqualToString:operation]) {
+        result = M_PI;
     }
     [self pushOperand:result];
     return result;

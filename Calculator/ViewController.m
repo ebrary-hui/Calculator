@@ -14,6 +14,7 @@
 @implementation ViewController
 @synthesize display = _display;
 @synthesize brain = _brain;
+@synthesize processDisplay = _processDisplay;
 
 @synthesize userIsInMiddleOfEnteringANumber = _userIsInMiddleOfEnteringANumber;
 
@@ -60,6 +61,7 @@
 
 
 - (void)viewDidUnload {
+    [self setProcessDisplay:nil];
     [super viewDidUnload];
 }
 @end
