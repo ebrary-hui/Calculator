@@ -48,6 +48,8 @@
 
 - (IBAction)enterPressed {
     [self.brain pushOperand:[self.display.text doubleValue]];
+    NSString *s = [self.processDisplay.text stringByAppendingString:self.display.text];
+    self.processDisplay.text = [s stringByAppendingString:@" "];
     self.userIsInMiddleOfEnteringANumber = NO;
 }
 
@@ -57,6 +59,7 @@
     self.userIsInMiddleOfEnteringANumber = NO;
     NSString *resultString = [NSString stringWithFormat:@"%g", [self.brain performOperation:sender.currentTitle]];
     self.display.text = resultString;
+    self.processDisplay.text = [[self.processDisplay.text stringByAppendingString:sender.currentTitle] stringByAppendingString:@" "];
 }
 
 
