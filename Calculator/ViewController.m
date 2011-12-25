@@ -27,6 +27,11 @@
 - (IBAction)decimalPointPressed {
     NSLog(@"Decimal point pressed");
 }
+- (IBAction)clearPressed:(id)sender {
+    self.display.text = @"0";
+    self.processDisplay.text = @"";
+    [self.brain clear];
+}
 
 - (IBAction)digitPressed:(UIButton *)sender {
     NSString *digit = sender.currentTitle;

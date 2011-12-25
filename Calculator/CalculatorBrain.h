@@ -17,4 +17,6 @@
 
 -(double)popOperand;
 
+-(void)clear;
+
 @end
